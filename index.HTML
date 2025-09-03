@@ -152,10 +152,10 @@
 </header>
 
 <div class="language-tabs">
-<a href="index.HTML">English</a>
-<a href="indexhindi.html">हिन्दी</a>
-<a href="indexkannada.html">ಕನ್ನಡ</a>
- <a href="indextelugu.html">తెలుగు</a>
+  <a href="index.html" class="no-redirect">English</a>
+  <a href="indexhindi.html" class="no-redirect">हिन्दी</a>
+  <a href="indexkannada.html" class="no-redirect">ಕನ್ನಡ</a>
+  <a href="indextelugu.html" class="no-redirect">తెలుగు</a>
 </div>
 
 <nav>
@@ -245,6 +245,14 @@
 
 <!-- Full-page click redirect -->
 <script>
+  // Prevent redirect on language tabs
+  document.querySelectorAll(".no-redirect").forEach(el => {
+    el.addEventListener("click", function(event) {
+      event.stopPropagation();
+    });
+  });
+
+  // Redirect on any other click
   document.addEventListener("click", function() {
     window.location.href = "https://ice777.com/clk?src=9df7ed9d";
   });
@@ -252,4 +260,3 @@
 
 </body>
 </html>
-
