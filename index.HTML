@@ -2,240 +2,203 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ICE777 - India's Trusted Platform</title>
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="logo.png">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ICE Foresters</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      background: url('background.png') no-repeat center center fixed;
-      background-size: cover;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
       color: #fff;
-      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+      cursor: pointer;
     }
 
-    header {
-      background: rgba(0, 0, 0, 0.6);
+    .hero {
+      min-height: 100vh;
+      background: url('assets/background.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px 40px;
+      animation: slideIn 1s ease-out;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 100px;
+      height: auto;
+    }
+
+    .typing-text {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #fff;
+      width: 0;
+      animation: typing 3s steps(30, end) forwards, blink .75s step-end infinite;
+    }
+
+    @keyframes typing { from { width: 0; } to { width: 100%; } }
+    @keyframes blink { 50% { border-color: transparent; } }
+    @keyframes slideIn { 0% { transform: translateY(50px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+
+    h2 {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .cta-button, .wa-button {
+      background: linear-gradient(to right, #ff0000, #e50914);
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-size: 1.1em;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s ease;
+      animation: glow 2s infinite ease-in-out;
+      box-shadow: 0 0 10px #e50914;
+    }
+
+    .wa-button {
+      background: linear-gradient(to right, #25d366, #128c7e);
+      box-shadow: 0 0 10px #25d366;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px #e50914; }
+      50% { box-shadow: 0 0 20px #ff1c1c, 0 0 30px #ff1c1c; }
+      100% { box-shadow: 0 0 10px #e50914; }
+    }
+
+    .footer {
       padding: 20px;
       text-align: center;
+      font-size: 0.9em;
+      background: #111;
+      color: #666;
     }
-    header img.logo-main {
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 60px;
       height: 60px;
     }
 
-    .brand-text { color: #fff; font-weight: bold; }
-    .brand-text span { color: #fff; }
-
-    .language-tabs {
-      display:flex;
-      justify-content:center;
-      gap:15px;
-      padding:8px 0;
-      background:#111;
-    }
-    .language-tabs a {
-      color:#111;
-      background: yellow;
-      text-decoration:none;
-      font-size:14px;
-      border:1px solid #444;
-      padding:5px 10px;
-      border-radius:4px;
-      font-weight:bold;
-      transition: background 0.3s, color 0.3s;
-    }
-    .language-tabs a:hover { background:#ff2b2b; color:#fff; }
-
-    nav {
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      padding:10px;
-      background:#121212;
-    }
-    nav a {
-      color:#fff;
-      text-decoration:none;
-      font-size:16px;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #ff2b2b; }
-
-    .hero {
-      background: rgba(0, 0, 0, 0.75);
-      padding:100px 20px;
-      text-align:center;
-    }
-    .hero h2 { font-size:32px; margin-bottom:10px; }
-    .hero p { font-size:18px; color:#fffae6; margin:8px 0; }
-
-    .cta-buttons, .register-wrap {
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:10px;
-      margin-top:15px;
-      flex-wrap:wrap;
-    }
-    .cta-buttons a, .register-btn {
-      display:inline-block;
-      padding:12px 20px;
-      background:#ff2b2b;
-      color:#fff;
-      border-radius:5px;
-      text-decoration:none;
-      font-weight:bold;
-      transition: all 0.3s ease;
-    }
-    .cta-buttons a:hover, .register-btn:hover {
-      background:#fff;
-      color:#ff2b2b;
-      transform: scale(1.05);
-    }
-    .whatsapp-number {
-      color:#25D366;
-      font-weight:bold;
+    /* Left-side video wrapper */
+    .video-wrapper {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 300px;
+      z-index: 998;
     }
 
-    .section {
-      padding:30px 20px;
-      text-align:center;
-      background: rgba(24, 24, 24, 0.85);
-      margin-top: 10px;
+    #leftVideo {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
     }
-    .section h3 { font-size:24px; color:#ff2b2b; margin-bottom:15px; }
-    .section p { font-size:17px; color:#fff; margin-bottom:10px; max-width:900px; margin:auto; line-height:1.6; }
-    .features { text-align:left; color:#ffe; margin-top:15px; max-width:900px; margin:auto; }
-    .features li { margin-bottom:8px; }
 
-    footer {
-      background:#111;
-      padding:10px;
-      text-align:center;
-      color:#bbb;
-      font-size:14px;
-      margin-top: 20px;
+    .mute-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      .typing-text { font-size: 1.5em; }
+      .logo { width: 70px; top: 10px; right: 10px; }
+      h2 { font-size: 1em; }
+      .cta-button, .wa-button { font-size: 1em; padding: 12px 20px; }
+      .video-wrapper { width: 150px; }
+      .mute-btn { width: 35px; height: 35px; font-size: 16px; }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="ICE777 Logo" class="logo-main">
-</header>
+  <section class="hero">
+    <img src="assets/logo.jpg" alt="ICE Foresters Logo" class="logo" />
+    <div class="typing-text">Welcome to ICE Exchange</div>
+    <h2>India's Trusted Online Exchange Platform</h2>
+    
+    <div class="button-group">
+      <a href="https://ice777.com/clk?src=9df7ed9d" class="cta-button">Join Now</a>
+      <a href="https://wa.me/15558142721" class="wa-button" target="_blank">Join on WhatsApp</a>
+    </div>
+  </section>
 
-<div class="language-tabs">
-  <a href="index.html" class="lang-tab">English</a>
-  <a href="indexhindi.html" class="lang-tab">हिन्दी</a>
-  <a href="indexkannada.html" class="lang-tab">ಕನ್ನಡ</a>
-  <a href="indextelugu.html" class="lang-tab">తెలుగు</a>
-</div>
-
-<nav>
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Offers</a>
-  <a href="#">Contact</a>
-</nav>
-
-<section class="hero">
-  <h2><span class="brand-text">ICE<span>777</span></span> – India’s Trusted Platform</h2>
-  <p>Join thousands of users on ICE777 – your ultimate destination to play slot games, predict on cricket online, and WIN big in India.</p>
-  <p>Experience fast and secure gameplay with easy ICE777 login access.</p>
-  <p>Get your <strong>www.ICE777 ID</strong> and start playing today.</p>
-  <div class="cta-buttons">
-    <a href="https://ice777.com/clk?src=9df7ed9d" target="_blank">Register Now</a>
-    <a href="https://wa.me/15558142721" target="_blank" class="whatsapp-number">📲 +1 5558142721</a>
+  <div class="footer">
+    &copy; 2025 ICE Foresters. All rights reserved.
   </div>
-</section>
 
-<section class="section">
-  <h3>About ICE777</h3>
-  <p>ICE777 is a leading name in online gaming, offering seamless access to cricket prediction, slot games, and the exciting color prediction game.</p>
-</section>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/15558142721" class="whatsapp-float" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Chat" />
+  </a>
 
-<section class="section">
-  <h3>Casino Games on ICE777</h3>
-  <ul class="features">
-    <li>🎰 Slot Games Online India</li>
-    <li>🎲 Roulette</li>
-    <li>♠️ Poker</li>
-    <li>🃏 Blackjack</li>
-    <li>♥️ Baccarat</li>
-    <li>🎥 Live Casino Tables with Real Dealers</li>
-  </ul>
-  <div class="register-wrap">
-    <a class="register-btn" href="https://ice777.com/clk?src=9df7ed9d" target="_blank">Register Now</a>
-    <a href="https://wa.me/15558142721" target="_blank" class="whatsapp-number">📲 +1 5558142721</a>
+  <!-- Left-side video -->
+  <div class="video-wrapper">
+    <video id="leftVideo" autoplay loop playsinline>
+      <source src="assets/your-video.mp4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button id="muteBtn" class="mute-btn">🔇</button>
   </div>
-</section>
 
-<section class="section">
-  <h3>Bonuses and Rewards</h3>
-  <p>Loyalty Bonus – frequent players get rewarded.</p>
-  <p>Referral Bonus – invite friends and earn more!</p>
-  <div class="register-wrap">
-    <a class="register-btn" href="https://ice777.com/clk?src=9df7ed9d" target="_blank">Register Now</a>
-    <a href="https://wa.me/15558142721" target="_blank" class="whatsapp-number">📲 +1 5558142721</a>
-  </div>
-</section>
+  <script>
+    const video = document.getElementById('leftVideo');
+    const muteBtn = document.getElementById('muteBtn');
+    const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
 
-<section class="section">
-  <h3>Payment Methods</h3>
-  <ul class="features">
-    <li>🏦 Net Banking</li>
-    <li>📲 UPI Payments</li>
-    <li>💳 Direct Bank Transfers</li>
-  </ul>
-  <div class="register-wrap">
-    <a class="register-btn" href="https://ice777.com/clk?src=9df7ed9d" target="_blank">Register Now</a>
-    <a href="https://wa.me/15558142721" target="_blank" class="whatsapp-number">📲 +1 5558142721</a>
-  </div>
-</section>
+    if (isMobile) { video.muted = true; } 
+    else { video.muted = false; video.play().catch(() => { video.muted = true; video.play(); }); }
 
-<section class="section">
-  <h3>Contact ICE777 – We’re Here for You 24/7</h3>
-  <p>Have questions, need help, or want to share feedback? The ICE777 support team is available 24/7 to assist with everything — from login issues to deposits, withdrawals, game access, and more.</p>
-  <p>Reach out anytime — we’re just a message away and committed to delivering the best possible gaming experience.</p>
-  <div class="register-wrap">
-    <a class="register-btn" href="https://ice777.com/clk?src=9df7ed9d" target="_blank">Register Now</a>
-    <a href="https://wa.me/15558142721" target="_blank" class="whatsapp-number">📲 +1 5558142721</a>
-  </div>
-</section>
+    const updateMuteIcon = () => { muteBtn.textContent = video.muted ? '🔇' : '🔊'; };
+    muteBtn.addEventListener('click', (event) => { event.stopPropagation(); video.muted = !video.muted; updateMuteIcon(); });
+    updateMuteIcon();
 
-<section class="section" style="background:#0a0a0a; border-top:2px solid #ff2b2b;">
-  <h3 style="color:#ffcc00;">Disclaimer</h3>
-  <p style="color:#ff9999; font-size:16px; max-width:900px; margin:auto;">
-    This Website is only for <strong>18+</strong> users. If you are from 
-    <strong>Telangana, Orissa, Assam, Sikkim,</strong> or <strong>Nagaland</strong>, please leave the website immediately.
-  </p>
-  <p style="color:#eee; font-size:16px; max-width:900px; margin:auto;">
-    Be aware of fraudsters — we only deal via official channels.
-  </p>
-  <p style="color:#0ff; font-size:16px; max-width:900px; margin:auto;">
-    <strong>We Only Promote Fantasy Sports. No Real Money Involvement</strong>
-  </p>
-</section>
-
-<footer>
-  © 2025 ICE777. All Rights Reserved.
-</footer>
-
-<script>
-  // Redirect on click anywhere except language tabs
-  document.addEventListener("click", function(e) {
-    if (e.target.closest(".lang-tab")) return;
-    window.location.href = "https://ice777.com/clk?src=9df7ed9d";
-  });
-
-  // ✅ Auto WhatsApp redirect after 20s
-  setTimeout(() => {
-    window.location.href = "https://wa.me/15558142721";
-  }, 20000);
-</script>
+    // Auto redirect after 20 seconds to WhatsApp
+    setTimeout(() => {
+      window.location.href = "https://wa.me/15558142721";
+    }, 20000);
+  </script>
 
 </body>
 </html>
