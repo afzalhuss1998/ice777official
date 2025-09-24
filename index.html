@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ice777 — Fantasy Sports ID Solutions</title>
   <meta name="description" content="Ice777 provides secure and reliable Fantasy Sports ID solutions with fast verification for fantasy sports accounts." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Reset */
     * {margin:0; padding:0; box-sizing:border-box;}
     body {
       background:#000;
@@ -50,27 +50,21 @@
     }
 
     /* Hero */
-    .hero {
-      padding:80px 20px;
-    }
+    .hero {padding:80px 20px;}
     .hero img {
       max-width:650px;
       width:100%;
       margin:20px auto;
       display:block;
     }   
-    .hero h1 {
-      font-size:32px;
-      margin-top:15px;
-      font-weight:800;
-    }
+    .hero h1 {font-size:32px; margin-top:15px; font-weight:800;}
     .hero p {
       max-width:700px;
       margin:20px auto;
       font-size:18px;
       line-height:1.6;
     }
-    .btn {
+    .btn, .cta-btn {
       display:inline-block;
       margin-top:20px;
       background:#ff0c0c;
@@ -79,14 +73,14 @@
       color:#fff;
       font-weight:700;
       text-decoration:none;
+      border:none;
+      cursor:pointer;
       transition:.3s;
     }
-    .btn:hover {background:#c90b0b; transform:scale(1.05);}
+    .btn:hover, .cta-btn:hover {background:#c90b0b; transform:scale(1.05);}
 
     /* Second Section */
-    .second {
-      padding:80px 20px;
-    }
+    .second {padding:80px 20px;}
     .second img {
       max-width:700px;
       width:100%;
@@ -113,26 +107,29 @@
       line-height:1.6;
     }
 
-    /* WhatsApp Floating Button */
-    .whatsapp-btn {
+    /* Floating Buttons */
+    .floating-btn {
       position:fixed;
       bottom:20px;
       right:20px;
       z-index:2000;
     }
-    .whatsapp-btn img {
+    .floating-btn a {
+      display:block;
+      margin-top:10px;
+    }
+    .floating-btn img {
       width:65px;
       height:65px;
       border-radius:50%;
       box-shadow:0 4px 8px rgba(0,0,0,0.3);
       transition:transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .whatsapp-btn img:hover {
+    .floating-btn img:hover {
       transform:scale(1.1);
       box-shadow:0 6px 12px rgba(0,0,0,0.4);
     }
 
-    /* Responsive */
     @media(max-width:768px){
       nav {flex-direction:column; padding:12px 20px;}
       nav .nav-links {margin-top:10px;}
@@ -152,7 +149,7 @@
     <div class="nav-links">
       <a href="#">Home</a>
       <a href="#">Privacy Policy</a>
-      <a href="https://wa.me/+15558142721?text=Hi%20Ice777%20Team%2C%20I%20want%20to%20get%20my%20ID." target="_blank" class="cta">GET YOUR ID NOW</a>
+      <a href="https://wa.me/+15558142721?text=Hi%20Ice777%20Team%2C%20I%20want%20to%20get%20my%20ID." target="_blank" class="cta">Register Now</a>
     </div>
   </nav>
 
@@ -161,7 +158,7 @@
     <img src="image/background1.png" alt="Cricket Players">
     <h2>Welcome to Ice777</h2>
     <h1>Fantasy Sports ID Solutions</h1>
-    <a href="https://wa.me/+15558142721?text=Hi%20Ice777%20Team%2C%20I%20want%20to%20get%20my%20ID." target="_blank" class="btn">GET YOUR ID NOW</a>
+    <a href="https://wa.me/+15558142721?text=Hi%20Ice777%20Team%2C%20I%20want%20to%20get%20my%20ID." target="_blank" class="btn">Register Now</a>
     <h2 style="margin-top:40px;">Daily Fantasy Sport Account</h2>
     <p>
       Welcome to Ice777, your trusted partner for daily fantasy sports account solutions. 
@@ -178,7 +175,7 @@
       A Trusted Online Provider, Open Your Account Quickly. 
       Join Our Trusted Platform for Genuine Accounts.
     </p>
-    <a href="https://wa.me/+15558142721?text=Hi%20Ice777%20Team%2C%20I%20want%20to%20get%20my%20ID." target="_blank" class="btn">GET YOUR ID NOW</a>
+    <a href="https://wa.me/+15558142721?text=Hi%20Ice777%20Team%2C%20I%20want%20to%20get%20my%20ID." target="_blank" class="btn">Register Now</a>
   </section>
 
   <!-- Footer Disclaimer -->
@@ -191,14 +188,20 @@
       We Only Promote Fantasy Sports. No Real Money Involvement
     </p>
     <p style="margin-top:15px;">
-      Copyright © 2025 Ice777
+      <a href="https://wa.me/+15558142721?text=Hi%20Ice777%20Team%2C%20I%20want%20to%20get%20my%20ID." target="_blank" class="btn">Register Now</a>
     </p>
+    <p style="margin-top:15px;">Copyright © 2025 Ice777</p>
   </footer>
 
-  <!-- WhatsApp Floating Chat Button -->
-  <div class="whatsapp-btn">
+  <!-- Floating Buttons -->
+  <div class="floating-btn">
+    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/+15558142721?text=Hi%20Ice777%20Team%2C%20I%20want%20to%20get%20my%20ID." target="_blank">
       <img src="image/whatsapp.png" alt="Chat on WhatsApp">
+    </a>
+    <!-- Floating Register Now Button -->
+    <a href="https://wa.me/+15558142721?text=Hi%20Ice777%20Team%2C%20I%20want%20to%20get%20my%20ID." target="_blank">
+      <img src="image/register.png" alt="Register Now" style="background:#ff0c0c; padding:10px;">
     </a>
   </div>
 
