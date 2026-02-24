@@ -1,16 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ice777 — Fantasy Sports ID Solutions</title>
-  <meta name="description" content="Ice777 provides secure and reliable Fantasy Sports ID solutions with fast verification for fantasy sports accounts." />
+
   <style>
     * {margin:0; padding:0; box-sizing:border-box;}
     body {
       background:#000;
       color:#fff;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       text-align:center;
       position:relative;
     }
@@ -27,65 +28,49 @@
       z-index:10;
     }
     nav .logo img {height:45px;}
-    nav .nav-links {display:flex; align-items:center;}
+    nav .nav-links {display:flex; align-items:center; gap:15px;}
     nav .nav-links a {
       color:#fff;
       text-decoration:none;
-      margin-left:25px;
       font-weight:600;
       transition:.3s;
-      z-index:10;
     }
-    nav .nav-links a:hover {color:#ff0c0c;}
     nav .nav-links .cta {
-      background:#ff0c0c;
-      padding:10px 22px;
+      background:#25D366;
+      padding:10px 18px;
       border-radius:12px;
     }
-    nav .nav-links .cta:hover {
-      background:#c90b0b;
-      transform:scale(1.05);
-    }
+    nav .nav-links .cta:hover {transform:scale(1.05);}
 
     /* Hero */
-    .hero {
-      padding:80px 20px;
-    }
+    .hero {padding:80px 20px;}
     .hero img {
       max-width:1050px;
       width:100%;
-      margin:0 auto; 
+      margin:auto;
       display:block;
-    }   
-    .hero h2:first-of-type {
-      font-size:28px;
-      margin-top:15px;
     }
-    .hero h1 {
-      font-size:32px;
-      margin-top:10px;
-      font-weight:800;
-    }
+    .hero h2 {font-size:28px; margin-top:15px;}
+    .hero h1 {font-size:32px; margin-top:10px; font-weight:800;}
     .hero p {
       max-width:700px;
-      margin:20px auto; 
-      font-size:18px; 
+      margin:20px auto;
+      font-size:18px;
       line-height:1.6;
     }
+
     .btn {
       display:inline-block;
-      margin-top:20px;
-      background:#ff0c0c;
+      margin:10px;
+      background:#25D366;
       padding:12px 25px;
       border-radius:8px;
       color:#fff;
       font-weight:700;
       text-decoration:none;
       transition:.3s;
-      z-index:10;
-      position:relative;
     }
-    .btn:hover {background:#c90b0b; transform:scale(1.05);}
+    .btn:hover {transform:scale(1.05);}
 
     /* Second Section */
     .second {padding:80px 20px;}
@@ -96,7 +81,7 @@
       display:block;
     }
     .second h2 {font-size:26px; font-weight:800; margin:20px 0 15px;}
-    .second p {max-width:750px; margin:0 auto 25px; font-size:17px; line-height:1.6;}
+    .second p {max-width:750px; margin:auto; font-size:17px; line-height:1.6;}
 
     /* Footer */
     footer {
@@ -108,7 +93,7 @@
       z-index:10;
     }
 
-    /* Floating Website Button */
+    /* Floating WhatsApp Button */
     .website-btn {
       position:fixed;
       bottom:20px;
@@ -120,90 +105,63 @@
       height:65px;
       border-radius:50%;
       box-shadow:0 4px 8px rgba(0,0,0,0.3);
-      transition:transform 0.3s ease, box-shadow 0.3s ease;
+      animation:pulse 2s infinite;
     }
-    .website-btn img:hover {
-      transform:scale(1.1);
-      box-shadow:0 6px 12px rgba(0,0,0,0.4);
+    @keyframes pulse {
+      0% {transform:scale(1);}
+      50% {transform:scale(1.1);}
+      100% {transform:scale(1);}
     }
 
-    /* Overlay to catch all clicks */
+    /* Overlay */
     .click-overlay {
       position:fixed;
       top:0; left:0;
       width:100%; height:100%;
-      z-index:999;
-      cursor:pointer;
+      z-index:1;
     }
 
     @media(max-width:768px){
       nav {flex-direction:column; padding:12px 20px;}
-      nav .nav-links {margin-top:10px;}
-      .hero img, .second img {max-width:85%;}
       .hero h1 {font-size:22px;}
       .hero h2 {font-size:22px;}
-      .second h2 {font-size:22px;}
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">
-      <a href="#"><img src="image/logo.png" alt="Ice777 Logo"></a>
-    </div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Privacy Policy</a>
-      <a href="https://ice777.com/clk?src=9df7ed9d" class="cta">GET YOUR ID NOW</a>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="image/background1.png" alt="Cricket Players">
-    <h2>Welcome to Ice777</h2>
-    <h1>Fantasy Sports ID Solutions</h1>
-    <a href="https://ice777.com/clk?src=9df7ed9d" class="btn">GET YOUR ID NOW</a>
-    <h2 style="margin-top:40px;">Daily Fantasy Sport Account</h2>
-    <p>
-      Welcome to Ice777, your trusted partner for daily fantasy sports account solutions. 
-      Our platform provides a secure and compliant way to verify player identities, ensuring a smooth and enjoyable experience for users.
-    </p>
-  </section>
-
-  <!-- Second Section -->
-  <section class="second">
-    <img src="image/background2.png" alt="Cricket Ball & Bat">
-    <p>Get Your Online Account Now</p>
-    <h2>Secure and Reliable Online Account Services</h2>
-    <p>
-      A Trusted Online Provider, Open Your Account Quickly. 
-      Join Our Trusted Platform for Genuine Accounts.
-    </p>
-    <a href="https://ice777.com/clk?src=9df7ed9d" class="btn">GET YOUR ID NOW</a>
-  </section>
-
-  <!-- Footer Disclaimer -->
-  <footer>
-    <p>
-      Disclaimer: This Website is only for 18+ users. If you are from Telangana, Orissa, Assam, Sikkim, and Nagaland please leave the website immediately. 
-      Be aware of fraudsters.
-    </p>
-    <p style="margin-top:15px;">We Only Promote Fantasy Sports. No Real Money Involvement</p>
-    <p style="margin-top:15px;">Copyright © 2025 Ice777</p>
-  </footer>
-
-  <!-- Floating Website Button -->
-  <div class="website-btn">
-    <a href="https://ice777.com/clk?src=9df7ed9d" target="_blank">
-      <img src="image/linkicon.png" alt="Visit Ice777 Website">
-    </a>
+<!-- Navbar -->
+<nav>
+  <div class="logo">
+    <a href="#"><img src="image/logo.png" alt="Ice777 Logo"></a>
   </div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Privacy Policy</a>
+    <a href="https://wa.me/447367767794?text=Hi%20I%20want%20Fantasy%20ID" class="cta">WhatsApp 1</a>
+    <a href="https://wa.me/447770775390?text=Hi%20I%20want%20Fantasy%20ID" class="cta">WhatsApp 2</a>
+  </div>
+</nav>
 
-  <!-- Overlay Div to Catch All Clicks -->
-  <div class="click-overlay" onclick="window.location.href='https://ice777.com/clk?src=9df7ed9d'"></div>
+<!-- Hero -->
+<section class="hero">
+  <img src="image/background1.png" alt="">
+  <h2>Welcome to Ice777</h2>
+  <h1>Fantasy Sports ID Solutions</h1>
 
-</body>
-</html>
+  <a href="https://wa.me/447367767794?text=Hi%20I%20want%20Fantasy%20ID" class="btn">Chat Agent 1</a>
+  <a href="https://wa.me/447770775390?text=Hi%20I%20want%20Fantasy%20ID" class="btn">Chat Agent 2</a>
+
+  <h2 style="margin-top:40px;">Daily Fantasy Sport Account</h2>
+  <p>
+    Welcome to Ice777, your trusted partner for daily fantasy sports account solutions.
+    Our platform provides a secure and compliant way to verify player identities.
+  </p>
+</section>
+
+<!-- Second -->
+<section class="second">
+  <img src="image/background2.png" alt="">
+  <h2>Secure and Reliable
+```
