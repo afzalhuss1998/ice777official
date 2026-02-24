@@ -8,16 +8,17 @@
 
   <style>
     * {margin:0; padding:0; box-sizing:border-box;}
-    body {
+
+    body{
       background:#000;
       color:#fff;
-      font-family: Arial, sans-serif;
+      font-family:Arial, sans-serif;
       text-align:center;
       position:relative;
     }
 
-    /* Navbar */
-    nav {
+    /* NAVBAR */
+    nav{
       display:flex;
       justify-content:space-between;
       align-items:center;
@@ -25,41 +26,53 @@
       background:rgba(0,0,0,0.9);
       position:sticky;
       top:0;
-      z-index:10;
+      z-index:100;
     }
-    nav .logo img {height:45px;}
-    nav .nav-links {display:flex; align-items:center; gap:15px;}
-    nav .nav-links a {
-      color:#fff;
+
+    nav .logo img{height:45px;}
+
+    nav .nav-links{
+      display:flex;
+      gap:15px;
+      align-items:center;
+    }
+
+    nav .nav-links a{
       text-decoration:none;
+      color:#fff;
       font-weight:600;
-      transition:.3s;
     }
-    nav .nav-links .cta {
+
+    .cta{
       background:#25D366;
       padding:10px 18px;
       border-radius:12px;
+      transition:.3s;
     }
-    nav .nav-links .cta:hover {transform:scale(1.05);}
 
-    /* Hero */
-    .hero {padding:80px 20px;}
-    .hero img {
+    .cta:hover{transform:scale(1.05);}
+
+    /* HERO */
+    .hero{padding:80px 20px;}
+
+    .hero img{
       max-width:1050px;
       width:100%;
       margin:auto;
       display:block;
     }
-    .hero h2 {font-size:28px; margin-top:15px;}
-    .hero h1 {font-size:32px; margin-top:10px; font-weight:800;}
-    .hero p {
+
+    .hero h2{font-size:28px; margin-top:15px;}
+    .hero h1{font-size:32px; margin-top:10px; font-weight:800;}
+
+    .hero p{
       max-width:700px;
       margin:20px auto;
       font-size:18px;
       line-height:1.6;
     }
 
-    .btn {
+    .btn{
       display:inline-block;
       margin:10px;
       background:#25D366;
@@ -70,98 +83,157 @@
       text-decoration:none;
       transition:.3s;
     }
-    .btn:hover {transform:scale(1.05);}
 
-    /* Second Section */
-    .second {padding:80px 20px;}
-    .second img {
+    .btn:hover{transform:scale(1.05);}
+
+    /* SECOND */
+    .second{padding:80px 20px;}
+
+    .second img{
       max-width:700px;
       width:100%;
       margin:20px auto;
       display:block;
     }
-    .second h2 {font-size:26px; font-weight:800; margin:20px 0 15px;}
-    .second p {max-width:750px; margin:auto; font-size:17px; line-height:1.6;}
 
-    /* Footer */
-    footer {
+    .second h2{
+      font-size:26px;
+      font-weight:800;
+      margin:20px 0 15px;
+    }
+
+    /* FOOTER */
+    footer{
       background:rgba(0,0,0,0.9);
       padding:30px 20px;
       font-size:14px;
-      line-height:1.6;
-      position:relative;
-      z-index:10;
+      margin-top:40px;
     }
 
-    /* Floating WhatsApp Button */
-    .website-btn {
+    /* FLOATING WHATSAPP */
+    .website-btn{
       position:fixed;
       bottom:20px;
       right:20px;
       z-index:1000;
     }
-    .website-btn img {
+
+    .website-btn img{
       width:65px;
       height:65px;
       border-radius:50%;
-      box-shadow:0 4px 8px rgba(0,0,0,0.3);
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
       animation:pulse 2s infinite;
     }
-    @keyframes pulse {
-      0% {transform:scale(1);}
-      50% {transform:scale(1.1);}
-      100% {transform:scale(1);}
+
+    @keyframes pulse{
+      0%{transform:scale(1);}
+      50%{transform:scale(1.1);}
+      100%{transform:scale(1);}
     }
 
-    /* Overlay */
-    .click-overlay {
+    /* OVERLAY CLICK */
+    .click-overlay{
       position:fixed;
-      top:0; left:0;
-      width:100%; height:100%;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
       z-index:1;
     }
 
     @media(max-width:768px){
-      nav {flex-direction:column; padding:12px 20px;}
-      .hero h1 {font-size:22px;}
-      .hero h2 {font-size:22px;}
+      nav{flex-direction:column; padding:12px 20px;}
+      .hero h1{font-size:22px;}
+      .hero h2{font-size:22px;}
     }
+
   </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
+<!-- NAVBAR -->
 <nav>
   <div class="logo">
-    <a href="#"><img src="image/logo.png" alt="Ice777 Logo"></a>
+    <a href="#"><img src="image/logo.png" alt="logo"></a>
   </div>
+
   <div class="nav-links">
     <a href="#">Home</a>
     <a href="#">Privacy Policy</a>
-    <a href="https://wa.me/447367767794?text=Hi%20I%20want%20Fantasy%20ID" class="cta">WhatsApp 1</a>
-    <a href="https://wa.me/447770775390?text=Hi%20I%20want%20Fantasy%20ID" class="cta">WhatsApp 2</a>
+
+    <a class="cta"
+       href="https://wa.me/447367767794?text=Hi%20I%20want%20Fantasy%20ID">
+       WhatsApp 1
+    </a>
+
+    <a class="cta"
+       href="https://wa.me/447770775390?text=Hi%20I%20want%20Fantasy%20ID">
+       WhatsApp 2
+    </a>
   </div>
 </nav>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero">
   <img src="image/background1.png" alt="">
+
   <h2>Welcome to Ice777</h2>
   <h1>Fantasy Sports ID Solutions</h1>
 
-  <a href="https://wa.me/447367767794?text=Hi%20I%20want%20Fantasy%20ID" class="btn">Chat Agent 1</a>
-  <a href="https://wa.me/447770775390?text=Hi%20I%20want%20Fantasy%20ID" class="btn">Chat Agent 2</a>
+  <a class="btn"
+     href="https://wa.me/447367767794?text=Hi%20I%20want%20Fantasy%20ID">
+     Chat Agent 1
+  </a>
+
+  <a class="btn"
+     href="https://wa.me/447770775390?text=Hi%20I%20want%20Fantasy%20ID">
+     Chat Agent 2
+  </a>
 
   <h2 style="margin-top:40px;">Daily Fantasy Sport Account</h2>
+
   <p>
     Welcome to Ice777, your trusted partner for daily fantasy sports account solutions.
-    Our platform provides a secure and compliant way to verify player identities.
+    Our platform provides a secure and compliant way to verify player identities and ensure a smooth user experience.
   </p>
 </section>
 
-<!-- Second -->
+<!-- SECOND SECTION -->
 <section class="second">
   <img src="image/background2.png" alt="">
-  <h2>Secure and Reliable
+  <h2>Secure and Reliable Online Account Services</h2>
+
+  <a class="btn"
+     href="https://wa.me/447367767794?text=Hi%20I%20want%20Fantasy%20ID">
+     Chat Agent 1
+  </a>
+
+  <a class="btn"
+     href="https://wa.me/447770775390?text=Hi%20I%20want%20Fantasy%20ID">
+     Chat Agent 2
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>18+ Only. Play responsibly.</p>
+  <p>Copyright © 2025 Ice777</p>
+</footer>
+
+<!-- FLOATING BUTTON -->
+<div class="website-btn">
+  <a href="https://wa.me/447367767794?text=Hi%20I%20want%20Fantasy%20ID" target="_blank">
+    <img src="image/whatsapp.png" alt="whatsapp">
+  </a>
+</div>
+
+<!-- OVERLAY -->
+<div class="click-overlay"
+ onclick="window.location.href='https://wa.me/447367767794?text=Hi%20I%20want%20Fantasy%20ID'">
+</div>
+
+</body>
+</html>
 ```
